@@ -17,10 +17,10 @@ from flask_jwt_extended import create_access_token, jwt_required, get_jwt_identi
 import os
 from dotenv import load_dotenv
 
-api = Blueprint('api',resources={r"/*": {"origins": "https://travel-buddy-973vnfewv-brittney-hookers-projects.vercel.app"}})
+api = Blueprint('api', __name__)
 
 # Allow CORS requests to this API
-CORS(api)
+CORS(api, resources={r"/*": {"origins": "https://travel-buddy-973vnfewv-brittney-hookers-projects.vercel.app"}})
 
 
 @api.route('/hello', methods=['POST', 'GET'])
