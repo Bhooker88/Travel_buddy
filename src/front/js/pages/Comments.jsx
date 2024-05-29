@@ -58,7 +58,7 @@ const Comments = () => {
                             <div className="comment-form-title">Write comment</div>
                             <form onSubmit={handleSubmit}>
                                 <textarea className="comment-form-textarea" onChange={(e) => onChange(e)} value={comment}/>
-                                <button className="comment-form-button">Submit</button>
+                                <button className="comment-form-button">Submit Comment</button>
                             </form>
                             <div className="comments-container">                        
                                 {store.comments.map((comment, index) => (                                    
