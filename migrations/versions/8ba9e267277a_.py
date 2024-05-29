@@ -27,7 +27,7 @@ def upgrade():
     sa.Column('activities', sa.String(length=200), nullable=True),
     sa.Column('transportation', sa.String(length=200), nullable=True),
     sa.Column('tips', sa.String(), nullable=True),
-    sa.Column('media_urls', sa.ARRAY(sa.String()), nullable=True),
+    sa.Column('media_urls', sa.String(), nullable=True), 
     sa.Column('created_at', sa.Date(), nullable=True),
     sa.Column('modified_at', sa.Date(), nullable=True),
     sa.ForeignKeyConstraint(['user_id'], ['user.id'], ),
