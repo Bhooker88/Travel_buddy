@@ -20,6 +20,9 @@ def upgrade():
     with op.batch_alter_table('user', schema=None) as batch_op:
         batch_op.add_column(sa.Column('username', sa.String(length=120), nullable=False))
         batch_op.add_column(sa.Column('places_visited', sa.String(), nullable=True))  # Use String to store JSON
+
+    # Create unique constraint after adding columns to avoid circular dependency
+    with op.batch_alter_table('user', schema=None) as batch_op:
         batch_op.create_unique_constraint('uq_user_username', ['username'])
 
     # ### end Alembic commands ###
