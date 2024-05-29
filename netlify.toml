@@ -1,12 +1,10 @@
 [build]
-  publish = "build"
-  functions = "functions"
+  publish = "build"          # The directory where the static files will be placed after build
+  functions = "functions"    # The directory where your serverless functions are stored
+  command = "pip install -r requirements.txt && npm install && npm run build"
 
 [build.environment]
   PIPENV_VENV_IN_PROJECT = "true"
-
-[build]
-  command = "pip install -r requirements.txt && npm run build"
 
 [[redirects]]
   from = "/*"
