@@ -18,7 +18,7 @@ import os
 from dotenv import load_dotenv
 
 api = Blueprint('api', __name__)
-CORS(api, resources={r"/*": {"origins": "https://travel-buddy-973vnfewv-brittney-hookers-projects.vercel.app"}})
+CORS(api, resources={r"/*": {"origins": "https://travel-buddy-9dbomlz64-brittney-hookers-projects.vercel.app"}})
 
 
 @api.route('/hello', methods=['POST', 'GET'])
