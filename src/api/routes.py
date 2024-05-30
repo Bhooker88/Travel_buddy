@@ -18,8 +18,6 @@ import os
 from dotenv import load_dotenv
 
 api = Blueprint('api', __name__)
-
-# Allow CORS requests to this API
 CORS(api, resources={r"/*": {"origins": "https://travel-buddy-973vnfewv-brittney-hookers-projects.vercel.app"}})
 
 

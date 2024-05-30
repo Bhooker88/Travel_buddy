@@ -1,4 +1,4 @@
-const apiUrl = process.env.BACKEND_URL;
+const apiUrl = "https://polar-everglades-71968-a97614488297.herokuapp.com/api";
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
